@@ -8,8 +8,18 @@ module.exports = {
   theme: {
     fontFamily: {
       body: ['Inter', 'sans-serif']
+    },
+    screens: {
+      sm: '560px'
+    },
+    extend: {
+      width: {
+        128: '32rem'
+      }
     }
   },
-  variants: {},
+  variants: {
+
+  },
   plugins: []
 }
