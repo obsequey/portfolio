@@ -44,6 +44,9 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  purgeCSS: {
+    whiteList: ['select-none']
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
