@@ -11,10 +11,25 @@ export const state = () => ({
       `
     }
   ],
-  socials: {
-    twitter: 'https://twitter.com/burnallatonce',
-    github: 'https://github.com/obsequey',
-    telegram: '',
-    facebook: ''
+  socials: [
+    {
+      name: 'twitter',
+      icon: 'twitter.svg',
+      link: 'https://twitter.com/burnallatonce'
+    },
+    {
+      name: 'github',
+      icon: 'github.svg',
+      link: 'https://github.com/obsequey'
+    },
+    {
+      name: 'telegram',
+      icon: 'telegram.svg',
+      link: ''
+    },
+    {
+      name: 'facebook',
+      icon: 'facebook.svg',
+      link: ''
   }
 })

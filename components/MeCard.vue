@@ -1,34 +1,19 @@
 <template>
-  <div class="flex mb-5">
-    <div class="rounded overflow-hidden mr-5 shadow-2xl">
-      <img class="w-24" src="~/assets/img/me.jpg" alt srcset>
+  <div class="flex  mb-16">
+    <div class="rounded flex-shrink-0 overflow-hidden h-24 w-24 mr-5 shadow-2xl">
+      <img class="h-100" src="/me.jpg" alt srcset>
     </div>
-    <div class="col-span-2 flex flex-col justify-center align-middle">
-      <div class="text-xl font-bold mb-1">
+    <div class="flex flex-col justify-center align-middle">
+      <h1 class="text-xl font-bold mb-1">
         Artyom Aristov
-      </div>
-      <div class="mb-2">
+      </h1>
+      <p class="mb-2">
         Front-end developer
-      </div>
-      <ul class="flex w-24">
-        <li class="flex-1 mr-2">
-          <a href="https://example.com" target="_blank">
-            <img class="h-6" src="~/assets/img/twitter.svg" alt srcset>
-          </a>
-        </li>
-        <li class="flex-1 mr-2">
-          <a href="https://example.com" target="_blank">
-            <img class="h-6" src="~/assets/img/github.svg" alt srcset>
-          </a>
-        </li>
-        <li class="flex-1 mr-2">
-          <a href="https://example.com" target="_blank">
-            <img class="h-6" src="~/assets/img/facebook.svg" alt srcset>
-          </a>
-        </li>
-        <li class="flex-1">
-          <a href="https://example.com" target="_blank">
-            <img class="h-6" src="~/assets/img/telegram.svg" alt srcset>
+      </p>
+      <ul class="flex w-32">
+        <li v-for="(socialButton, i) in $store.state.socials" :key="i" class="flex-1 mr-2">
+          <a :href="socialButton.link" target="_blank">
+            <img :src="`/${socialButton.icon}`" :alt="socialButton.name" srcset>
           </a>
         </li>
       </ul>
