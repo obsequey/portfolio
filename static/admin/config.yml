@@ -1,5 +1,5 @@
 backend:
-  name: obsequey/portfolio
+  name: git-gateway
   branch: netlify-cms
 
 media_folder: static/img
