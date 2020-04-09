@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans p-2">
+  <div class="font-body leading-5 p-2">
     <nuxt />
   </div>
 </template>
@@ -12,4 +12,22 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@font-face {
+  font-family: "Inter";
+  src: url('~assets/fonts/Inter/Inter-Regular-slnt=0.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('~assets/fonts/Inter/Inter-Medium-slnt=0.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('~assets/fonts/Inter/Inter-Bold-slnt=0.ttf') format('truetype');
+  font-weight: 700;
+}
+</style>
