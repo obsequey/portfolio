@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-4 gap-2">
+  <div class="m-5">
     <me-card />
     <project
       v-for="project in $store.state.projects"
