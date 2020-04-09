@@ -30,20 +30,13 @@
 export default {
   name: 'ProjectCard',
   props: {
-    // project: {
-    //   type: Object,
-    //   default: null
-    // },
+    project: {
+      type: Object,
+      default: null
+    },
     idOfSelectedCard: {
       type: Number,
       default: null
-    }
-  },
-  async asyncData ({ params, payload }) {
-    if (payload) { return { project: payload } } else {
-      return {
-        project: await require(`~/assets/content/blog/${params.blog}.json`)
-      }
     }
   },
   computed: {
