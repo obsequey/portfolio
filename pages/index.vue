@@ -6,9 +6,9 @@
     </h2>
     <ul>
       <project
-        v-for="project in projects"
-        :id="`card-${project.id}`"
-        :key="project.id"
+        v-for="(project, i) in projects"
+        :id="`card-${i}`"
+        :key="i"
         :project="project"
         :id-of-selected-card="selectedCardId"
         @select-this-card="handleSelectedCard($event)"

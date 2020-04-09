@@ -52,14 +52,14 @@ export default {
       return this.project.description.split(' ').slice(0, 25).join(' ') + '...'
     },
     cardIsOpened () {
-      return this.idOfSelectedCard === this.project.id
+      return this.idOfSelectedCard === this.$vnode.key
     }
   },
   watch: {
   },
   methods: {
     selectCard () {
-      this.$emit('select-this-card', this.project.id)
+      this.$emit('select-this-card', this.$vnode.key)
     },
     debounce (func, interval) {
       let onCooldown = false
