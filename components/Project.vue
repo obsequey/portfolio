@@ -1,11 +1,29 @@
 <template>
-  <div class="project-card">
-    <h2 class="project-card__title">
+  <li :class="`select-none rounded relative cursor-pointer transform transition-all relative duration-75 p-4 mb-5 pointer ${cardIsOpened ? 'shadow-2xl scale-105' : 'hover:shadow-2xl hover:scale-105'}`" @click="selectCard">
+    <h3 class="text-md leading-6 font-bold mb-4">
       {{ project.title }}
-    </h2>
-    <p class="project-card__description" v-html="project.description" />
-    <div class="project-card__image-container" />
-  </div>
+    </h3>
+    <ul class="flex mb-4">
+      <li v-for="(tech, i) in project.stack" :key="i" class="mr-2">
+        <img class="h-5" :src="`/tech-icons/${tech.icon}`" :alt="project.stack.name">
+      </li>
+    </ul>
+    <div v-if="!cardIsOpened">
+      {{ shortedDescription }}
+    </div>
+    <div v-else>
+      <div class="mb-4">
+        {{ project.description }}
+      </div>
+      <div class="mb-4">
+        <a target="_blank" class="text-gray-600 underline" :href="project.link">{{ project.link }}</a>
+      </div>
+      <img class="h-100" :src="`/${project.img}`" alt="" srcset="">
+    </div>
+    <button :class="`transform group-hover:translate-1 transition-transform duration-75 mt-4 block w-5 mx-auto opacity-50 ${cardIsOpened ? 'rotate-180' : ''}`">
+      <img src="~/assets/img/arrow.svg" alt="" srcset="">
+    </button>
+  </li>
 </template>
 
 <script>
@@ -15,9 +33,40 @@ export default {
     project: {
       type: Object,
       default: null
+    },
+    idOfSelectedCard: {
+      type: Number,
+      default: null
+    }
+  },
+  computed: {
+    shortedDescription () {
+      // return a shorter description
+      return this.project.description.split(' ').slice(0, 25).join(' ') + '...'
+    },
+    cardIsOpened () {
+      return this.idOfSelectedCard === this.project.id
+    }
+  },
+  watch: {
+  },
+  methods: {
+    selectCard () {
+      this.$emit('select-this-card', this.project.id)
+    },
+    debounce (func, interval) {
+      let onCooldown = false
+      return function () {
+        if (onCooldown) { return }
+        func.apply(this, arguments)
+        onCooldown = true
+        setInterval(() => (onCooldown = false), interval)
+      }
     }
   }
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="scss" scoped>
+
+</style>

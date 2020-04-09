@@ -1,11 +1,19 @@
 <template>
   <div class="m-5">
     <me-card />
-    <project
-      v-for="project in $store.state.projects"
-      :key="project.id"
-      :project="project"
-    />
+    <h2 class="font-bold text-xl mb-8">
+      Projects
+    </h2>
+    <ul>
+      <project
+        v-for="project in $store.state.projects"
+        :id="`card-${project.id}`"
+        :key="project.id"
+        :project="project"
+        :id-of-selected-card="selectedCardId"
+        @select-this-card="handleSelectedCard($event)"
+      />
+    </ul>
   </div>
 </template>
 
@@ -17,11 +25,24 @@ export default {
   components: {
     Project,
     MeCard
+  },
+  data () {
+    return {
+      selectedCardId: null
+    }
+  },
+  methods: {
+    handleSelectedCard (id) {
+      if (this.selectedCardId === id) {
+        // close card on click if it's already opened
+        this.selectedCardId = null
+      } else {
+        this.selectedCardId = id
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
-}
 </style>
