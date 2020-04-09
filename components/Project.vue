@@ -9,11 +9,11 @@
       </li>
     </ul>
     <div v-if="!cardIsOpened">
-      {{ shortedDescription }}
+      {{ project.description }}
     </div>
     <div v-else>
       <div class="mb-4">
-        {{ project.description }}
+        {{ project.body }}
       </div>
       <div class="mb-4">
         <a target="_blank" class="text-gray-600 underline" :href="project.link">{{ project.link }}</a>
@@ -40,10 +40,6 @@ export default {
     }
   },
   computed: {
-    shortedDescription () {
-      // return a shorter description
-      return this.project.description.split(' ').slice(0, 25).join(' ') + '...'
-    },
     cardIsOpened () {
       return this.idOfSelectedCard === this.$vnode.key
     }
