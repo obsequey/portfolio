@@ -6,7 +6,7 @@
     </h2>
     <ul>
       <project
-        v-for="project in $store.state.projects"
+        v-for="project in projects"
         :id="`card-${project.id}`"
         :key="project.id"
         :project="project"
@@ -29,6 +29,11 @@ export default {
   data () {
     return {
       selectedCardId: null
+    }
+  },
+  computed: {
+    projects () {
+      return this.$store.state.projects
     }
   },
   methods: {
