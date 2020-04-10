@@ -19,3 +19,9 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Technologies'
+        name: 'stack'
+        widget: 'list'
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Icon, name: icon, widget: image}

@@ -5,7 +5,7 @@
     </h3>
     <ul class="flex mb-4">
       <li v-for="(tech, i) in project.stack" :key="i" class="mr-2">
-        <img class="h-5" :src="`/tech-icons/${tech.icon}`" :alt="project.stack.name">
+        <img class="h-5" :src="`/tech-icons/${tech.icon}`" :alt="tech.name">
       </li>
     </ul>
     <div v-if="!cardIsOpened">
