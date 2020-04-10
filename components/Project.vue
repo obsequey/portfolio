@@ -18,7 +18,7 @@
       <div class="mb-4">
         <a target="_blank" class="text-gray-600 underline" :href="project.link">{{ project.link }}</a>
       </div>
-      <img class="h-100" :src="`/${project.img}`" alt="" srcset="">
+      <img class="h-100" :src="`${project.img}`" alt="" srcset="">
     </div>
     <button :class="`transform transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`">
       <img src="~/assets/img/arrow.svg" alt="" srcset="">
