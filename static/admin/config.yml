@@ -24,7 +24,7 @@ collections:
         widget: 'relation'
         collection: 'technologies'
         multiple: true
-        valueField: 'name'
+        valueField: 'icon'
         searchFields: ['name']
   - name: 'technologies'
     label: 'Techs'
