@@ -22,6 +22,7 @@ collections:
       - label: 'Technologies'
         name: 'stack'
         widget: 'select'
+        multiple: true
         options:
-          - {label: Vue, name: vue, icon: vuejs.svg}
-          - {label: JavaScript, name: JavaScript, icon: js-square.svg}
+          - {label: Vue, value: Vue, name: vue, icon: vuejs.svg}
+          - {label: JavaScript, value: JavaScript, name: JavaScript, icon: js-square.svg}
