@@ -5,9 +5,6 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  corePlugins: {
-    userSelect: true
-  },
   theme: {
     fontFamily: {
       body: ['Inter', 'sans-serif']

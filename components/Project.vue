@@ -20,7 +20,7 @@
       </div>
       <img class="h-100" :src="`/${project.img}`" alt="" srcset="">
     </div>
-    <button :class="`transform group-hover:translate-1 transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`">
+    <button :class="`transform transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`">
       <img src="~/assets/img/arrow.svg" alt="" srcset="">
     </button>
   </li>
