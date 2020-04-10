@@ -5,7 +5,21 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  theme: {},
-  variants: {},
+  theme: {
+    fontFamily: {
+      body: ['Inter', 'sans-serif']
+    },
+    screens: {
+      sm: '560px'
+    },
+    extend: {
+      width: {
+        128: '32rem'
+      }
+    }
+  },
+  variants: {
+
+  },
   plugins: []
 }

@@ -7,11 +7,18 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
+  // add your custom rules here,
+  rules: {
+    'vue/no-v-html': 'off'
+  },
+  plugins: ['prettier', 'vue'],
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    'eslint:recommended',
+    'plugin:vue/essential'
   ],
-  // add your custom rules here
-  rules: {
+  globals: {
+    $nuxt: true
   }
 }
