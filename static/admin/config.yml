@@ -25,6 +25,7 @@ collections:
         collection: 'technologies'
         multiple: true
         valueField: 'icon'
+        displayFields: ['name']
         searchFields: ['name']
   - name: 'technologies'
     label: 'Techs'
