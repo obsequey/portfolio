@@ -4,7 +4,7 @@
     <h2 class="font-bold text-xl mb-8">
       Projects
     </h2>
-    <ul>
+    <ul class="mb-16">
       <project
         v-for="(project, i) in projects"
         :id="`card-${i}`"
