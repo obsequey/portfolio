@@ -16,9 +16,7 @@
       <div class="mb-4" @click="selectCard">
         {{ project.body }}
       </div>
-      <div class="mb-4">
-        <a target="_blank" class="text-gray-600 underline" :href="project.link">{{ project.link }}</a>
-      </div>
+      <a target="_blank" class="text-gray-600 underline inline-block mb-4" :href="project.link">{{ project.link }}</a>
       <img class="h-100" :src="`${project.img}`" alt="" srcset="" @click="selectCard">
     </div>
     <button :class="`transform transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`" @click="selectCard">
