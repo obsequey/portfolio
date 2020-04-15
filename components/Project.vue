@@ -4,7 +4,7 @@
       {{ project.title }}
     </h3>
     <!-- TODO: add sorting by techs later -->
-    <ul class="flex mb-4">
+    <ul class="inline-flex mb-4">
       <li v-for="(icon, i) in project.stack" :key="i" class="mr-2">
         <img class="h-5" :src="`${icon}`" alt="">
       </li>
