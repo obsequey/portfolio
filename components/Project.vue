@@ -12,7 +12,7 @@
     <div v-if="!cardIsOpened" @click="selectCard">
       {{ project.description }}
     </div>
-    <div v-else>
+    <div v-else @click.self="selectCard">
       <div class="mb-4" @click="selectCard">
         {{ project.body }}
       </div>
