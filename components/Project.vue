@@ -1,6 +1,6 @@
 <template>
-  <li :class="`select-none rounded relative cursor-pointer transform transition-all relative duration-75 p-4 mb-5 pointer ${cardIsOpened ? 'shadow-2xl scale-105' : 'hover:shadow-2xl hover:scale-105'}`" @click="selectCard">
-    <h3 class="text-md leading-6 font-bold mb-4">
+  <li :class="`select-none rounded relative cursor-pointer transform transition-all relative duration-75 p-4 mb-5 pointer ${cardIsOpened ? 'shadow-2xl scale-105' : 'hover:shadow-2xl hover:scale-105'}`" @click.self="selectCard">
+    <h3 class="text-md leading-6 font-bold mb-4" @click="selectCard">
       {{ project.title }}
     </h3>
     <!-- TODO: add sorting by techs later -->
@@ -9,19 +9,19 @@
         <img class="h-5" :src="`${icon}`" alt="">
       </li>
     </ul>
-    <div v-if="!cardIsOpened">
+    <div v-if="!cardIsOpened" @click="selectCard">
       {{ project.description }}
     </div>
     <div v-else>
-      <div class="mb-4">
+      <div class="mb-4" @click="selectCard">
         {{ project.body }}
       </div>
       <div class="mb-4">
         <a target="_blank" class="text-gray-600 underline" :href="project.link">{{ project.link }}</a>
       </div>
-      <img class="h-100" :src="`${project.img}`" alt="" srcset="">
+      <img class="h-100" :src="`${project.img}`" alt="" srcset="" @click="selectCard">
     </div>
-    <button :class="`transform transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`">
+    <button :class="`transform transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`" @click="selectCard">
       <img src="~/assets/img/arrow.svg" alt="" srcset="">
     </button>
   </li>
