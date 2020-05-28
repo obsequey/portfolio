@@ -12,7 +12,7 @@
       </p>
       <ul class="flex w-32">
         <li v-for="(socialButton, i) in $store.state.socials" :key="i" class="flex-1 mr-2">
-          <a :href="socialButton.link" target="_blank">
+          <a :href="socialButton.link" rel="noreferrer" target="_blank">
             <img :src="`/${socialButton.icon}`" :alt="socialButton.name" srcset>
           </a>
         </li>

@@ -16,7 +16,7 @@
         {{ project.body }}
       </div>
       <div class="mb-4">
-        <a target="_blank" class="text-gray-600 underline" :href="project.link">{{ project.link }}</a>
+        <a target="_blank" rel="noreferrer" class="text-gray-600 underline" :href="project.link">{{ project.link }}</a>
       </div>
       <img class="h-100" :src="`${project.img}`" alt="" srcset="">
     </div>
