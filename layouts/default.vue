@@ -17,17 +17,20 @@ export default {
   font-family: "Inter";
   src: url('~assets/fonts/Inter/Inter-Regular-slnt=0.ttf') format('truetype');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
   src: url('~assets/fonts/Inter/Inter-Medium-slnt=0.ttf') format('truetype');
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
   src: url('~assets/fonts/Inter/Inter-Bold-slnt=0.ttf') format('truetype');
   font-weight: 700;
+  font-display: swap;
 }
 </style>
