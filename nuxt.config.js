@@ -4,7 +4,10 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Aristov Artyom | Portfolio',
+    htmlAttrs: {
+      lang: 'en-US'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

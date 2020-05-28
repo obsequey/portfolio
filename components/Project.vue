@@ -1,5 +1,5 @@
 <template>
-  <li :class="`select-none rounded relative cursor-pointer transform transition-all relative duration-75 p-4 mb-5 pointer ${cardIsOpened ? 'shadow-2xl scale-105' : 'hover:shadow-2xl hover:scale-105'}`" @click="selectCard">
+  <li aria-label="Project card" :class="`select-none rounded relative cursor-pointer transform transition-all relative duration-75 p-4 mb-5 pointer ${cardIsOpened ? 'shadow-2xl scale-105' : 'hover:shadow-2xl hover:scale-105'}`" @click="selectCard">
     <h3 class="text-md leading-6 font-bold mb-4">
       {{ project.title }}
     </h3>
@@ -20,7 +20,7 @@
       </div>
       <img class="h-100" :src="`${project.img}`" alt="" srcset="">
     </div>
-    <button :class="`transform transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`">
+    <button aria-label="Expand project card" :class="`transform transition-transform duration-75 mt-4 block w-5 mx-auto opacity-25 ${cardIsOpened ? 'rotate-180' : ''}`">
       <img src="~/assets/img/arrow.svg" alt="" srcset="">
     </button>
   </li>
