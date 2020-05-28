@@ -1,7 +1,7 @@
 <template>
   <div class="flex  mb-16">
     <div class="rounded flex-shrink-0 overflow-hidden h-24 w-24 mr-5 shadow-2xl">
-      <img class="h-100" src="/me.jpg" alt srcset>
+      <img class="h-100" src="/me.webp" alt srcset>
     </div>
     <div class="flex flex-col justify-center align-middle">
       <h1 class="text-xl font-bold mb-1">
