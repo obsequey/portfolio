@@ -15,12 +15,12 @@ export const state = () => ({
     {
       name: 'telegram',
       icon: 'telegram.svg',
-      link: ''
+      link: 'https://tgram.link/burnallatonce'
     },
     {
       name: 'facebook',
       icon: 'facebook.svg',
-      link: ''
+      link: 'https://www.facebook.com/burnallatonce'
     }
   ]
 })
