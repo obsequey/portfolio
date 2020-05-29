@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @font-face {
   font-family: "Inter";
   src: url('~assets/fonts/Inter/Inter-Regular-slnt=0.ttf') format('truetype');
@@ -32,5 +32,17 @@ export default {
   src: url('~assets/fonts/Inter/Inter-Bold-slnt=0.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
+}
+
+.project-body {
+  ul {
+    list-style: disc;
+    list-style-type: disc;
+    margin: 0 0 1rem 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
 }
 </style>
