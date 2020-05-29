@@ -48,8 +48,6 @@ export default {
     '@nuxtjs/axios'
   ],
   purgeCSS: {
-    mode: 'postcss',
-    whitelistPatterns: [/wl-*/]
   },
   /*
    ** Axios module configuration
