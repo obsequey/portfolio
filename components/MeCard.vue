@@ -1,5 +1,5 @@
 <template>
-  <div class="flex  mb-16">
+  <div class="flex mb-16">
     <div class="rounded flex-shrink-0 overflow-hidden h-24 w-24 mr-5 shadow-2xl">
       <img class="h-100" src="/me.webp" alt="My photo" srcset>
     </div>
@@ -7,7 +7,7 @@
       <h1 class="text-xl font-bold mb-1">
         Artyom Aristov
       </h1>
-      <p class="mb-2">
+      <p class="mb-2 text-sm">
         Front-end developer
       </p>
       <ul class="flex w-32">
