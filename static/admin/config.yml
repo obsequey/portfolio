@@ -6,38 +6,38 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'projects'
-    label: 'Projects'
-    format: 'json'
-    folder: 'assets/content/projects'
+  - name: "projects"
+    label: "Projects"
+    format: "json"
+    folder: "assets/content/projects"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - label: 'Location/City'
-        name: 'location'
-        widget: 'string'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - label: "Location/City"
+        name: "location"
+        widget: "list"
         required: false
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Link', name: 'link', widget: 'string', required: false }
-      - { label: 'Screenshot', name: 'img', widget: 'image' }
-      - label: 'Technologies'
-        name: 'stack'
-        widget: 'relation'
-        collection: 'technologies'
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Screenshot", name: "img", widget: "image" }
+      - label: "Technologies"
+        name: "stack"
+        widget: "relation"
+        collection: "technologies"
         multiple: true
-        valueField: 'icon'
-        displayFields: ['name']
-        searchFields: ['name']
-  - name: 'technologies'
-    label: 'Techs'
-    format: 'json'
-    folder: 'assets/content/technologies'
+        valueField: "icon"
+        displayFields: ["name"]
+        searchFields: ["name"]
+  - name: "technologies"
+    label: "Techs"
+    format: "json"
+    folder: "assets/content/technologies"
     create: true
     fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Icon', name: 'icon', widget: 'image' }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "image" }
