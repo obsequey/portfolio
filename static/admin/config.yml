@@ -21,9 +21,10 @@ collections:
       - label: 'Location/City'
         name: 'location'
         widget: 'string'
+        required: false
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Link', name: 'link', widget: 'string', required: false}
-      - { label: 'Screenshot', name: 'img', widget: 'image'}
+      - { label: 'Link', name: 'link', widget: 'string', required: false }
+      - { label: 'Screenshot', name: 'img', widget: 'image' }
       - label: 'Technologies'
         name: 'stack'
         widget: 'relation'
@@ -39,4 +40,4 @@ collections:
     create: true
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Icon', name: 'icon', widget: 'image'}
+      - { label: 'Icon', name: 'icon', widget: 'image' }
