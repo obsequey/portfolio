@@ -1,8 +1,11 @@
 <template>
   <li aria-label="Project card" :class="`select-none rounded relative cursor-pointer transform transition-all relative duration-75 p-4 bg-white mb-5 pointer ${cardIsOpened ? 'shadow-2xl scale-105' : 'hover:shadow-2xl hover:scale-105'}`" @click="selectCard">
-    <h3 class="text-md leading-6 font-bold mb-4">
+    <h3 :class="`text-md leading-6 font-bold ${project.location ? 'mb-1' : 'mb-4'}`">
       {{ project.title }}
     </h3>
+    <h4 v-if="project.location" class="mb-4 text-sm">
+      {{ project.location }}
+    </h4>
     <ul class="flex mb-4">
       <li v-for="(icon, i) in project.stack" :key="i" class="mr-2">
         <img class="h-5" :src="`${icon}`" alt="">
