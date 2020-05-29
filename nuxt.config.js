@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Portfolio | Aristov Artyom',
+    title: 'Portfolio of Aristov Artyom',
     htmlAttrs: {
       lang: 'en-US'
     },
