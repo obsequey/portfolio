@@ -1,19 +1,21 @@
 <template>
   <div class="m-5">
     <me-card />
-    <h2 class="font-bold text-xl mb-8">
-      Projects
-    </h2>
-    <ul>
-      <project
-        v-for="(project, i) in projects"
-        :id="`card-${i}`"
-        :key="i"
-        :project="project"
-        :id-of-selected-card="selectedCardId"
-        @select-this-card="handleSelectedCard($event)"
-      />
-    </ul>
+    <section>
+      <h2 class="font-bold text-xl mb-8">
+        Projects
+      </h2>
+      <ul>
+        <project
+          v-for="(project, i) in projects"
+          :id="`card-${i}`"
+          :key="i"
+          :project="project"
+          :id-of-selected-card="selectedCardId"
+          @select-this-card="handleSelectedCard($event)"
+        />
+      </ul>
+    </section>
   </div>
 </template>
 

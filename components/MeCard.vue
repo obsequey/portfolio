@@ -1,5 +1,5 @@
 <template>
-  <div class="flex mb-16">
+  <section class="flex mb-16">
     <div class="rounded flex-shrink-0 overflow-hidden h-24 w-24 mr-5 shadow-2xl">
       <img class="h-100" src="/me.webp" alt="My photo" srcset>
     </div>
@@ -8,7 +8,7 @@
         Artyom Aristov
       </h1>
       <p class="mb-2 text-sm">
-        Front-end developer
+        Web developer
       </p>
       <ul aria-label="Social links" class="flex w-32">
         <li v-for="(socialButton, i) in $store.state.socials" :key="i" class="flex-1 mr-2">
@@ -18,7 +18,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
