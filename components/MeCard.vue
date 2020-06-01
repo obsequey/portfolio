@@ -8,7 +8,7 @@
         Artyom Aristov
       </h1>
       <p class="mb-2 text-sm">
-        Web developer
+        Web developer, he/him 🏳️‍🌈
       </p>
       <ul aria-label="Social links" class="flex w-32">
         <li v-for="(socialButton, i) in $store.state.socials" :key="i" class="flex-1 mr-2">
