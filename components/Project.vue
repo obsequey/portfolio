@@ -34,7 +34,7 @@
       </li>
     </ul>
     <p v-if="!cardIsOpened" aria-label="Short description" class="project-body text-sm">
-      {{ project.description }}
+      {{ shortenedProjectBody }}
     </p>
     <div
       v-else
@@ -100,6 +100,9 @@ export default {
     },
     sanitizedProjectBody () {
       return DOMPurify.sanitize(marked(this.project.body))
+    },
+    shortenedProjectBody () {
+      return this.project.body.split('.').slice(0, 1).join('') + '.'
     }
   },
   watch: {},
